@@ -42,32 +42,29 @@ class _ProductsListScreenState extends State<ProductsListScreen> {
                 child: Container(
                   width: 330,
                   height: 50,
-                  decoration: BoxDecoration(
-                      border: Border.all(color: Color(0xff004182)),
-                      borderRadius: BorderRadius.all(Radius.circular(25))),
-                  child: Row(
-                    children: [
-                      Container(
-                        width: 20,
-                      ),
-                      Image.asset(
-                        'assets/images/search-icon.png',
-                        width: 24,
-                        height: 24,
-                        color: Color(0xff004182),
-                      ),
-                      Container(
-                        width: 20,
-                      ),
-                      Text(
-                        'what do you search for?',
-                        style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w300),
+                  child: TextFormField(
+                     onChanged: (String? value){
+                     },
+                      decoration: InputDecoration(
+                        hintStyle: TextStyle(
+
+                          color: Colors.grey,
+                          fontSize: 14
+                        ),
+
+                        focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.transparent)),
+                          enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Color(0xff004182)),
+                          borderRadius: BorderRadius.circular(25),
+                        ),
+                        hintText: 'what do you search for?',
+                        filled: true,
+                        fillColor: Colors.white,
+                        prefixIcon:Icon(Icons.search,color: Color(0xff004182), size: 21,),
+                        alignLabelWithHint: true,
                       )
-                    ],
-                  ),
+                  )
                 ),
               ),
               Container(
